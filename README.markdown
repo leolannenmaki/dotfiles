@@ -4,7 +4,11 @@
 	homesick clone leolannenmaki/dotfiles
 	homesick symlink leolannenmaki/dotfiles
 
-# Git with bash completion 
+## To disable bash vi editing mode, comment out
+	.inputrc
+	set editing-mode vi
+
+## Git with bash completion 
 	sudo port install git-core +bash_completion +doc +svn
 
 
