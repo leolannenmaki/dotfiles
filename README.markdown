@@ -4,6 +4,10 @@
 	homesick clone leolannenmaki/dotfiles
 	homesick symlink leolannenmaki/dotfiles
 
+# Git with bash completion 
+	sudo port install git-core +bash_completion +doc +svn
+
+
 # Vim stuff
 
 ## Initalize plugins
