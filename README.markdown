@@ -1,20 +1,26 @@
-Dotfiles to use with homesick.
+# My dotfiles
 
-
-Using my dotfiles homesick: 
+# Installing with [Homesick][homesick]:
 	homesick clone leolannenmaki/dotfiles
+	homesick symlink leolannenmaki/dotfiles
+
+# Vim stuff
+
+## Initalize plugins
 	cd ~/.homesick/repos/leolannenmaki/dotfiles
 	git submodule init
 	git submodule update
-	homesick symlink leolannenmaki/dotfiles
 
+## Install command-t:
+	cd home/.vim/bundle/command-t
+	rake make
 
-If you want to use Ack with vim:
-
+## Install Ack:
 	Ubuntu:
 	sudo apt-get install ack-grep
 	let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 	
-	Install with MacPorts:
+	MacPorts:
 	sudo port install p5-app-ack
 
+[homesick]: http://github.com/technicalpickles/homesick
