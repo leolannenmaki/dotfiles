@@ -1,0 +1,5 @@
+# For unstaged(*) and staged(+) values next to branch name in __git_ps1
+GIT_PS1_SHOWDIRTYSTATE="enabled"
+
+# Enclosing (\[\]) around colors to avoid word-wrap weirdo stuff(http://ubuntuforums.org/showthread.php?t=234232)
+PS1='\[$BLUE\]\W/\[$LIGHT_GREEN\]$(__git_ps1 " (%s)") \[${NORMAL}\]$ '
