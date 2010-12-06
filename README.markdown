@@ -25,6 +25,7 @@
 [ack.vim][ack.vim]
 [vim-rainbow][vim-rainbow]
 [vim-surround][vim-surround]
+[repeat.vim][repeat.vim]
 
 ### Installed in some other way
 
@@ -56,4 +57,4 @@
 [vim-rainbow]: https://github.com/chrismetcalf/vim-rainbow
 [vim-surround]: https://github.com/tpope/vim-surround
 [pathogen.vim]: https://github.com/tpope/vim-pathogen
-
+[repeat.vim]: https://github.com/tpope/vim-repeat
