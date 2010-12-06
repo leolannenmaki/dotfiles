@@ -12,18 +12,33 @@
 	sudo port install git-core +bash_completion +doc +svn
 
 
-# Vim stuff
+# Vim
 
-## Initalize plugins
+## Plugins
+
+### Installed using [pathogen.vim][pathogen.vim]
+[nerdcommenter][nerdcommenter]
+[nerdtree][nerdtree]
+[snipmate][snipmate]
+[fugitive.vim][fugitive.vim]
+[Command-T][Command-T]
+[ack.vim][ack.vim]
+[vim-rainbow][vim-rainbow]
+[vim-surround][vim-surround]
+
+### Installed in some other way
+
+
+### Initalize plugins
 	cd ~/.homesick/repos/leolannenmaki/dotfiles
 	git submodule init
 	git submodule update
 
-## Install command-t:
+### Install command-t:
 	cd home/.vim/bundle/command-t
 	rake make
 
-## Install Ack:
+### Install Ack:
 	Ubuntu:
 	sudo apt-get install ack-grep
 	let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -32,3 +47,13 @@
 	sudo port install p5-app-ack
 
 [homesick]: http://github.com/technicalpickles/homesick
+[nerdcommenter]: https://github.com/scrooloose/nerdcommenter
+[nerdtree]: https://github.com/scrooloose/nerdtree
+[snipmate]: https://github.com/mkitt/snipmate.vim
+[fugitive.vim]: https://github.com/tpope/vim-fugitive
+[Command-T]: https://github.com/wincent/Command-T
+[ack.vim]: https://github.com/mileszs/ack.vim
+[vim-rainbow]: https://github.com/chrismetcalf/vim-rainbow
+[vim-surround]: https://github.com/tpope/vim-surround
+[pathogen.vim]: https://github.com/tpope/vim-pathogen
+
