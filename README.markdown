@@ -14,6 +14,8 @@
 
 # Vim
 
+Much of the stuff taken from http://stevelosh.com/blog/2010/09/coming-home-to-vim/ 
+
 ## Plugins
 
 ### Installed using [pathogen.vim][pathogen.vim]
