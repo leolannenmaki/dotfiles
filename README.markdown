@@ -28,6 +28,9 @@ Much of the stuff taken from http://stevelosh.com/blog/2010/09/coming-home-to-vi
 [vim-rainbow][vim-rainbow]
 [vim-surround][vim-surround]
 [repeat.vim][repeat.vim]
+[vim-yankring][vim-yankring]
+
+TODO: ctags
 
 ### Installed in .vim/plugin
 [scratch][scratch]
@@ -64,3 +67,4 @@ Much of the stuff taken from http://stevelosh.com/blog/2010/09/coming-home-to-vi
 [repeat.vim]: https://github.com/tpope/vim-repeat
 [scratch]: http://www.vim.org/scripts/script.php?script_id=664
 [slime]: http://technotales.wordpress.com/2007/10/03/like-slime-for-vim/ 
+[vim-yankring]: https://github.com/chrismetcalf/vim-yankring
