@@ -1,3 +1,6 @@
+" See http://stevelosh.com/blog/2010/09/coming-home-to-vim/ for more
+" information
+
 " Setup Bundle Support {
     filetype off
     call pathogen#runtime_append_all_bundles()
@@ -64,6 +67,7 @@
     set showmatch " Show matching of: () [] {}
   
   " Searching {
+  	" This turns off Vim’s crazy default regex characters and makes searches use normal regexes.
     nnoremap / /\v
     vnoremap / /\v
 
@@ -71,7 +75,7 @@
     set smartcase " Case sensitive when uppercase is present
     set incsearch " Search as you type
     set hlsearch " Highlight search matches
-    set gdefault
+    set gdefault " Applies substitutions globally on lines :%s/foo/bar/g
     " Clear highlights
     map <leader><space> :noh<cr>
     " Jump to matching () [] {}
@@ -113,8 +117,10 @@
     endif
 " }
 
-" Security
-set modelines=0
+" Security {
+	" prevents some security exploits having to do with modelines in files.
+	set modelines=0
+" }
 
 " Formatting {
   " Be smart, and awesome, about indentation

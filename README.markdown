@@ -27,7 +27,9 @@
 [vim-surround][vim-surround]
 [repeat.vim][repeat.vim]
 
-### Installed in some other way
+### Installed in .vim/plugin
+[scratch][scratch]
+[slime][slime]
 
 
 ### Initalize plugins
@@ -58,3 +60,5 @@
 [vim-surround]: https://github.com/tpope/vim-surround
 [pathogen.vim]: https://github.com/tpope/vim-pathogen
 [repeat.vim]: https://github.com/tpope/vim-repeat
+[scratch]: http://www.vim.org/scripts/script.php?script_id=664
+[slime]: http://technotales.wordpress.com/2007/10/03/like-slime-for-vim/ 
