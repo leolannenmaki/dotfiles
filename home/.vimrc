@@ -95,6 +95,7 @@
 	" GVim {
 	if has('gui_running')
 		set guifont=Menlo:h14
+		"let g:molokai_original = 1
 		colorscheme molokai
 		set background=dark
 
