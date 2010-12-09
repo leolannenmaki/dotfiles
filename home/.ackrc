@@ -1,0 +1,7 @@
+#Ignore case distinctions in PATTERN, only if PATTERN contains no upper case
+--smart-case
+#go ahead and search the text files.
+--type=text
+#Flush output immediately, even when ack is used non-interactively (when output goes to a pipe or file).
+--flush               
+
