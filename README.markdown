@@ -42,6 +42,8 @@ TODO: ctags
 	git submodule init
 	git submodule update
 
+### [Ignore doc/tags to avoid dirty plugins][http://vesavanska.com/2010/vim-plugin-documentation-problem-with-git/]
+
 ### Install command-t:
 	cd home/.vim/bundle/command-t
 	rake make
