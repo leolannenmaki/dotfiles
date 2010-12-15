@@ -48,7 +48,18 @@
 		" Author var
 		let g:snips_author = '<a class="linkclass" href="mailto:"></a>>'
 		" Shortcut for reloading snippets
-		nnoremap ,smr <esc>:exec ReloadAllSnippets()<cr>
+		nnoremap <leader>smr <esc>:exec ReloadAllSnippets()<cr>
+		" Quickly edit JS snippets
+		nmap <silent> <leader>smejs :e ~/.vim/bundle/snipmate/snippets/javascript.snippets<CR>
+
+		" see .vim/bundle/snipmate/after/plugin/snipMate.vim for more info
+		" and :help snipMate-remap
+		ino <silent> <tab> <c-r>=TriggerSnippet()<cr>
+		snor <silent> <tab> <esc>i<right><c-r>=TriggerSnippet()<cr>
+		ino <silent> <s-tab> <c-r>=BackwardsSnippet()<cr>
+		snor <silent> <s-tab> <esc>i<right><c-r>=BackwardsSnippet()<cr>
+		ino <silent> <c-r><tab> <c-r>=ShowAvailableSnips()<cr>
+
 	" }
 	" Rainbows! {
 		nmap <leader>R :RainbowParenthesesToggle<CR>
@@ -128,9 +139,11 @@
 	set gdefault " Applies substitutions globally on lines :%s/foo/bar/g
 	" Clear highlights
 	map <leader><space> :noh<cr>
+
 	" Jump to matching () [] {}
-	nmap <tab> %
-	vmap <tab> %
+	" Off because of snipMate
+	" nmap <tab> %
+	" vmap <tab> %
 " }
 
 
@@ -172,36 +185,12 @@
 	set laststatus=2
 " }
 
-" Folding {
-	set foldlevelstart=0
-	nnoremap <Space> za
-	vnoremap <Space> za
-	au BufNewFile,BufRead *.html map <leader>ft Vatzf
-
-	function! MyFoldText()
-		let line = getline(v:foldstart)
-
-		let nucolwidth = &fdc + &number * &numberwidth
-		let windowwidth = winwidth(0) - nucolwidth - 3
-		let foldedlinecount = v:foldend - v:foldstart
-
-		" expand tabs into spaces
-		let onetab = strpart('			', 0, &tabstop)
-		let line = substitute(line, '\t', onetab, 'g')
-
-		let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
-		let fillcharcount = windowwidth - len(line) - len(foldedlinecount) - 4
-		return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
-	endfunction
-	set foldtext=MyFoldText()
-" }
-
 " Keybindings {
 	" Use the damn hjkl keys
-	nnoremap <up> <nop>
-	nnoremap <down> <nop>
-	nnoremap <left> <nop>
-	nnoremap <right> <nop>
+	" nnoremap <up> <nop>
+	" nnoremap <down> <nop>
+	" nnoremap <left> <nop>
+	" nnoremap <right> <nop>
 
 	" And make them fucking work, too.
 	nnoremap j gj
@@ -216,8 +205,9 @@
 	map <leader>w <C-w>v<C-w>l
 
 	" Shift tabbing blocks of text (gv restores last visual block)
-	vmap <Tab> >gv
-	vmap <S-Tab> <gv
+	" Off because of snipMate
+	"vmap <Tab> >gv
+	"vmap <S-Tab> <gv
 
 	" Fuck you, help key.
 	set fuoptions=maxvert,maxhorz
@@ -248,11 +238,9 @@
 	inoremap <C-_> <Space><BS><Esc>:call InsertCloseTag()<cr>a
 
 	" Faster Esc
-	inoremap <Esc> <nop>
+	" inoremap <Esc> <nop>
 	inoremap jj <ESC>
 
-	" Edit .vimrc
-	"nmap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 	" Quickly edit/reload the vimrc file
 	nmap <silent> <leader>ev :e $MYVIMRC<CR>
 	nmap <silent> <leader>sv :so $MYVIMRC<CR>
