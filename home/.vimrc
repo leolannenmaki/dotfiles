@@ -49,8 +49,8 @@
 		let g:snips_author = '<a class="linkclass" href="mailto:"></a>>'
 		" Shortcut for reloading snippets
 		nnoremap <leader>smr <esc>:exec ReloadAllSnippets()<cr>
-		" Quickly edit JS snippets
-		nmap <silent> <leader>smejs :e ~/.vim/bundle/snipmate/snippets/javascript.snippets<CR>
+		" Quickly edit snippets
+		nnoremap <leader>es <C-w>s<C-w>j<C-w>L:e ~/.vim/bundle/snipmate/snippets/<cr>
 
 		" see .vim/bundle/snipmate/after/plugin/snipMate.vim for more info
 		" and :help snipMate-remap
@@ -242,7 +242,8 @@
 	inoremap jj <ESC>
 
 	" Quickly edit/reload the vimrc file
-	nmap <silent> <leader>ev :e $MYVIMRC<CR>
+	"nmap <silent> <leader>ev :e $MYVIMRC<CR>
+	nnoremap <leader>ev <C-w>s<C-w>j<C-w>L:e $MYVIMRC<cr>
 	nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 	" Sudo to write
