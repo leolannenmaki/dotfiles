@@ -3,5 +3,5 @@
 #go ahead and search the text files.
 --type=text
 #Flush output immediately, even when ack is used non-interactively (when output goes to a pipe or file).
---flush               
+#--flush               
 
