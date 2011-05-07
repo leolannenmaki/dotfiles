@@ -77,3 +77,4 @@ complete -o default -o nospace -F _git_checkout gco
 
 # Latex
 alias latexmkspeciale="grep -l '\\documentclass' *tex | xargs latexmk -pdf -pvc"
+alias server="open http://localhost:3001/ && python -m SimpleHTTPServer 3001"
