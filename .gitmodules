@@ -28,3 +28,12 @@
 [submodule "home/.vim/bundle/yankring"]
 	path = home/.vim/bundle/yankring
 	url = https://github.com/chrismetcalf/vim-yankring.git
+[submodule "home/.vim/bundle/vcscommand"]
+	path = home/.vim/bundle/vcscommand
+	url = https://github.com/harleypig/vcscommand.vim.git
+[submodule "home/.vim/bundle/indent-guides"]
+	path = home/.vim/bundle/indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "home/.vim/bundle/coffee-script"]
+	path = home/.vim/bundle/coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
