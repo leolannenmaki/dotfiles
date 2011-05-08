@@ -39,8 +39,10 @@
 " Plugins {
 	" NerdTree {
 		let NERDTreeChDirMode = 1
-		let NERDTreeWinSize=20
-		map <F2> :NERDTreeToggle<cr>
+		let NERDTreeWinSize=30
+		" guarantees that the NERDTrees for all tabs will be one and the same
+		map <F2> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+		"map <F2> :NERDTreeToggle<cr>
 		let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
 	" }
 	" SnipMate {
